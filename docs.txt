@@ -1,19 +1,23 @@
-HoppsHandler.check_origin(...)  -> ...
+Hopps documentation goes here! Use whatever format you find useful. Sample
+documentation and templates for you to work from follows.
+
+Connection(connection_uri: str, logSizeBytes: int=100*1024*1024)
+    Connection represents a connection between the Hopps server and the
+    MongoDB server.
+
+    Parameters:
+      * connection-uri: A string giving a MongoDB connection string for
+        Hopps to connect to.
+      * logSizeBytes: An optional parameter giving the maximum replication
+        log size.
+
+Connection.save(...) -> ...
     ...
 
-async require(self, roles: Iterable[Role]) -> None:
-    Provides a role-based access control mechanism. Each message handler
-    should call this method before doing anything else, with the required
-    roles as a parameter.
+HoppsHandler.check_origin(...) -> ...
+    ...
 
-    The default implementation will look up the set of roles associated
-    with the currently authenticated user within the database's security
-    collection.
-
-    Throws AccessDenied if the set of roles associated with the currently
-    authenticated does not contain ALL of the required roles.
-
-HoppsHandler.handle_auth(...) -> ...
+HoppsHandler.handle_save(...) -> ...
     ...
 
 ...

@@ -62,3 +62,21 @@ until you press return a second time.
 To retrieve the document, run the following command and again press return:
 
     get foo ff36cf3a-fd3b-431e-863e-5dc89d4f075e
+
+Project Anatomy
+===============
+
+Hopps has the following dependencies:
+
+* docopt: A command line option parsing library.
+* tornado: A web server library.
+* motor/pymongo: A pair of libraries for communicating with MongoDB.
+
+You should not need to be closely familiar with any these libraries to complete
+the challenge.
+
+* docs.txt: Documentation. You'll be writing in here.
+* hopps.py: The core Hopps library.
+* sample.py: A sample consumer of the Hopps library implementing a server.
+* cli.py: A command line interface that communicates with the server
+  started by sample.py.
